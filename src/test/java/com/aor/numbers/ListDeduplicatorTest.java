@@ -21,8 +21,8 @@ public class ListDeduplicatorTest {
 
   @Test
   public void bug_sort_8276(){
-    List<Integer> list = Arrays.asList(1,2,2,4);
-    List<Integer> expected = Arrays.asList(1,2,4);
+    List<Integer> list = Arrays.asList(1,2,2,2,2,2,2,2,2,2,3,3,4);
+    List<Integer> expected = Arrays.asList(1,2,3,4);
 
     ListDeduplicator deduplicator = new ListDeduplicator();
     List<Integer> sort = deduplicator.deduplicate(list);
